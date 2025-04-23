@@ -1,8 +1,7 @@
 name: second1
 on:
   push:
-    branches: 
-      -main
+    branches: [ main ]
 
 jobs:
   print_the_date:
