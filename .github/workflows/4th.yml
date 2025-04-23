@@ -18,3 +18,4 @@ jobs:
       - name: Echo environment
         run: |
           echo "Environment: $ENVIRONMENT"
+          echo "Environment: $ENV"
