@@ -14,6 +14,8 @@ on:
 jobs:
   print_the_environment:
     runs-on: ubuntu-latest
+    env:
+      ENV: ${{ inputs.env }}
 
     steps:
       - uses: actions/checkout@v4
