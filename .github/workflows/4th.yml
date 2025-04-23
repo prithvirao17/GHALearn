@@ -1,0 +1,19 @@
+name: fourth
+on:
+  workflow_dispatch:
+    inputs:
+      env:
+        required: true
+        type: environment
+        description: Enter the environment name
+
+
+jobs:
+  print_the_environment:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Echo environment
+        run: echo $ENVIRONMENT
