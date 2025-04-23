@@ -46,7 +46,7 @@ jobs:
         run: sleep 30; echo "Hello India"; sleep 30; echo "Bye India"
 
   third_job:
-    uses: actions/checkout
+    uses: actions/checkout@v4
     steps:
       - name: print the environment name
         run: echo $Environment
