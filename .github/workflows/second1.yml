@@ -1,4 +1,4 @@
-name: second
+name: second1
 on:
   push:
     branches: 
