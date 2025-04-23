@@ -3,6 +3,25 @@ on:
   push:
     branches:
       - main
+  pull_request:
+    branches:
+      - main
+    types:
+      - opened
+      - reopened
+      - closed
+  workflow_dispatch:
+    inputs:
+      Environment:
+        description: Enter the environment name
+        required: true
+        type: choice
+        options:
+          - dev
+          - qa
+          - uat
+
+
 
 jobs:
   first_job:
@@ -25,3 +44,9 @@ jobs:
       - uses: actions/checkout@v4
       - name: test sleep
         run: sleep 30; echo "Hello India"; sleep 30; echo "Bye India"
+
+  third_job:
+    uses: actions/checkout
+    steps:
+      - name: print the environment name
+        run: echo $Environment
