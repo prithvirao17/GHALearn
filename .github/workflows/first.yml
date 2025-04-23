@@ -1,1 +1,12 @@
 name: first
+on: workflow_dispatch
+
+jobs:
+  date:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+      - name: list the files on repo
+        run: ls -l
+       
