@@ -1,1 +1,11 @@
+name: My 2nd workflow
+on: push
 
+jobs:
+  name: First job
+  runs-on: ubuntu-latest
+
+  steps:
+    - uses: actions/checkout@v4  
+    - name: First step in first job
+      run: ls -l
