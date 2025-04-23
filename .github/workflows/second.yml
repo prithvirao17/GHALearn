@@ -1,0 +1,22 @@
+name: second
+on:
+  push:
+    branches: 
+      -main
+
+jobs:
+  print_the_date:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: list the files
+        run: ls -l
+
+      - name: Print the server date
+        run: date
+
+      - name: print hello world
+        run: echo "Hello world"
+  
