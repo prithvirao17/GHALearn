@@ -4,8 +4,11 @@ on:
     inputs:
       env:
         required: true
-        type: environment
+        type: choice
         description: Enter the environment name
+        options:
+          - dev
+          - qa
 
 
 jobs:
