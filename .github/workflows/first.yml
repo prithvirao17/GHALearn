@@ -1,0 +1,2 @@
+name: First worklow
+on: workflow_dispatch
