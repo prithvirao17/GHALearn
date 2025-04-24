@@ -10,4 +10,8 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Validate yaml files in my repo
+        id: val
         uses: GrantBirki/json-yaml-validate@v3.3.0
+
+      - name: Generate an output
+        run: echo ${{ steps.val.outputs.success }}
