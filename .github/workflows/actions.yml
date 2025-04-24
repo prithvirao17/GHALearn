@@ -12,4 +12,4 @@ jobs:
         with:
           fetch-depth: '0'
       - name: Print the depth
-        run: echo ${{ steps.step1.ref }}
+        run: echo ${{ steps.step1.outputs.ref }}
