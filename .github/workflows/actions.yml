@@ -6,10 +6,8 @@ jobs:
   actions:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout the code
-        id: step1
+      - name: checkout my repository
         uses: actions/checkout@v4
-        with:
-          fetch-depth: '0'
-      - name: Print the depth
-        run: echo ${{ steps.step1.outputs.ref }}
+
+      - name: Validate yaml files in my repo
+        uses: GrantBirki/json-yaml-validate@v3.3.0
