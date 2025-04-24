@@ -14,6 +14,7 @@ on:
 
 env:
   ENV: ${{ inputs.environment }}
+  PASS: ${{ secrets.MY_NAME }}
 
 jobs:
   demo:
@@ -23,3 +24,4 @@ jobs:
       - name: Print the environment variable
         run: |
           echo "Environment is $ENV"
+          echo "Password is $PASS"
