@@ -1,0 +1,26 @@
+name: Environment demo
+on:
+  workflow_dispatch:
+    inputs:
+      environ:
+        required: true
+        description: environment name
+        type: environment
+
+env:
+  ENVIRONMENT: ${{ inputs.environ }}
+
+jobs:
+  demo:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        version: [1,2,3]
+    steps:
+      - uses: actions/checkout@v4
+      - name: Print environment name and version name
+        run: |
+          echo "Environ is $ENVIRONMENT"
+          echo "Version is ${{ matrix.version }}"
+        
+    
