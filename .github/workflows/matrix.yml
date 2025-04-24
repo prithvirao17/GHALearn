@@ -1,0 +1,25 @@
+name: matrix_demo
+on:
+  workflow_dispatch:
+    inputs:
+      environment:
+        type: choice
+        required: true
+        description: select the environment
+        options:
+          - DEV
+          - QA
+          - UAT
+          - PROD
+
+env:
+  ENV: ${{ inputs.environment }}
+
+jobs:
+  demo:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Print the environment variable
+        run: |
+          echo "Environment is $ENV"
