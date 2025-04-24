@@ -1,0 +1,6 @@
+name: template
+on: workflow_dispatch
+
+jobs:
+  call-template:
+    uses: organization/.github/.github/workflows/template.yml
