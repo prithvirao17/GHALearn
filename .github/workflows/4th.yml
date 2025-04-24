@@ -3,10 +3,10 @@ on:
   workflow_dispatch:
     inputs:
       env:
-        required: true
+      required: true
         type: choice
         description: Enter the environment name
-        options:
+        optns:
           - dev
           - qa
 
